@@ -1,0 +1,20 @@
+<h1>Important Figures</h1>
+
+
+<% @figures.each do |figure| %>
+<h3><%= figure.name %>  <a style="font-size: 50%" href="/figures/<%= figure.id %>/edit">(Click Here To Edit)</a>
+</h3>
+<h4>Titles</h4>
+<ul>
+  <% figure.titles.each do |title| %>
+  <li><%= title.name %></li>
+  <% end  %>
+</ul>
+<h4>Landmarks</h4>
+<ul>
+  <% figure.landmarks.each do |landmark| %>
+  <li><%= landmark.name %></li>
+  <% end  %>
+</ul>
+
+<% end %>
